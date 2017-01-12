@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="author" content="Corey Fisher">
+<html>
+  <body>
+    <h1>Pizza Guys Order Form</h1>
+    <form>
+      Name:<br> <input type="text" name="name" placeholder="Your name" required> <br><br>
+      Address, #### Street Name:<br> <input type="text" name="address" placeholder="Delivery address" pattern="[0-9]+ ([A-Za-z]| )+" required> <br><br>
+      Phone Number, ###-###-####:<br> <input type="text" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <br> <br>
+      <u>Pizza size:</u><br>
+        <input type="radio" name="size" value="Large" required> Large
+        <input type="radio" name="size" value="Medium" required> Medium
+        <input type="radio" name="size" value="Small" required> Small
+      <br><br>
+      <u>Pizza toppings:</u><br>
+        <input type="checkbox" name="topping" value="Sausage"> Sausage
+        <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni
+        <input type="checkbox" name="topping" value="Olives"> Olives
+        <input type="checkbox" name="topping" value="Anchovies"> Anchovies
+        <input type="checkbox" name="topping" value="Onions"> Onions
+      <br><br>
+      <input type="submit" value="Submit">
+      <input type="reset">
+  </body>
+</html>
+  
