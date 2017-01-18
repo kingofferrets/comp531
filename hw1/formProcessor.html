@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Corey Fisher">
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+  <h1>Ricebook Registration Confirmation</h1>
+</head>
+<body onload="paramsToTable()">
+  <table id="paramtable">
+    <tr>
+       <th>Parameter</th>
+       <th>Value</th>
+    </tr>
+  </table>
+</body></html>
+
+<script>
+  function paramsToTable() {
+    table = document.getElementById("paramtable");
+    params = location.search.substring(1).split('&');
+    for(param in params) {
+      paramPair = params[param].split('=');
+      var row = table.insertRow();
+      var paramName = row.insertCell();
+      var paramVal = row.insertCell();
+      paramName.innerHTML = decodeURIComponent(paramPair[0]);
+      paramVal.innerHTML = decodeURIComponent(paramPair[1]).replace(/\+/g," ");
+    }
+  }
+</script>
