@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.clear.rice.edu/comp431/sample/hello.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hello HTML!</title>
+    
+</head>
+
+<body onload="redirectMessage()">
+
+<table border="1">
+	<tbody><tr><td>Athenian</td><td>Owl</td></tr>
+	<tr><td colspan="2"><img src="./hello_files/riceacademicseal1.jpg"></td></tr>
+</tbody></table>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<ul>
+	<li><a href="http://www.rice.edu/">Rice</a></li>
+	<li><a href="http://www.chron.com/">Houston Chronicle</a></li>
+	<li><a href="http://www.twitter.com/">Twitter</a></li>
+	<li><a href="http://www.twosigma.com/">TwoSigma</a></li>
+</ul>
+
+<textarea id="yourText" rows="10" cols="50">
+
+ --- Enter your message here --- 
+
+
+</textarea>
+<br>
+<input type="button" onclick="clearText()" value="Clear">
+
+<br><br>
+
+<span id="indicator">15</span>
+
+<br>
+<input type="button" onclick="stopRepeating()" value="Stop">
+<input type="button" onclick="startRepeating()" value="Start">
+
+
+</body></html>
+
+<script>
+  var counter = 15;
+  var repeating = -1;
+  function clearText() {
+    var textArea = document.getElementById("yourText");
+    textArea.value = "";
+  }
+  
+  function redirectMessage() {
+    setTimeout(function(){ alert("The page will redirect when the counter reaches zero."); }, 5000);
+    repeating = setInterval(inInterval,1000);
+  }
+
+  function inInterval() {
+    var indicator = document.getElementById("indicator");
+    counter = counter - 1;
+    indicator.innerHTML = counter;
+    if(counter === 0) {
+      clearInterval(repeating);
+      window.location.replace("https://www.clear.rice.edu/comp431/sample/hello.html");
+    }
+  }
+
+  function stopRepeating() {
+    clearInterval(repeating);
+    repeating = -1;
+  }
+  
+  function startRepeating() {
+    if(repeating === -1) {
+      repeating = setInterval(inInterval,1000);
+    }
+  }
+</script>
