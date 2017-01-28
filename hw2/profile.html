@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Corey Fisher">
+  <link rel="stylesheet" href="styles.css">
+  <div class="fakenav">
+    <h1>Ricebook - Profile</h1>
+    <!-- Form is used to make button redirect easier -->
+    <form action="main.html" method="get">
+      <input type="submit" value="Main Page" class="center">
+    </form>
+   </div>
+</head>
+
+
+<body>
+<br>
+<div class="card" id="output"></div>
+<br>
+<table>
+  <tr>
+    <th>Field</th>
+    <th>Entry</th>
+    <th>Current Value</th>
+  </tr>
+  <tr>
+    <td>Display Name</td>
+    <td><input type="text" id="dispname" value=""></td>
+    <td><div id="dispnameVal">Bob<div></td>
+  </tr>
+  <tr>
+    <td>Email Address</td>
+    <td><input type="text" id="email" value=""></td>
+    <td><div id="emailVal">bob@bob.bob<div></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input type="text" id="phone" value=""></td>
+    <td><div id="phoneVal">832-123-1234<div></td>
+  </tr>
+  <tr>
+    <td>Zip</td>
+    <td><input type="text" id="zip" value=""></td>
+    <td><div id="zipVal">77030<div></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="text" id="pw1" value=""></td>
+    <td><div id="pw1Val">bobbob123<div></td>
+  </tr>
+  <tr>
+    <td>Confirm Password</td>
+    <td><input type="text" id="pw2" value=""></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="button" value="Update" onclick="validate()"</td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+
+
+
+
+<script src="profile.js"></script>

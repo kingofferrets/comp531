@@ -1,0 +1,55 @@
+body {
+  background-color: LightCyan;
+}
+
+table {
+	margin: 0 auto;
+	width: 80%;
+	padding-bottom: 22px;
+	margin-bottom: 1.5pt;
+	padding: 3pt;
+	border: 1pt solid darkslategrey;
+	border-radius: 10px;
+	min-height: 3.5em;	
+	background-color: powderblue;
+}
+
+nav {
+     position: fixed;
+     left: 1px;
+     top: 1px;
+     border-radius: 5px;
+     border: 1pt solid darkslategrey;
+     background-color: powderblue;
+     padding: 5px;
+}
+
+.fakenav {
+     border-radius: 5px;
+     border: 1pt solid darkslategrey;
+     background-color: powderblue;
+     padding: 5px;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7em;
+}
+
+.card {	
+	margin: 0 auto;
+	width: 90%;
+	padding-bottom: 22px;
+	margin-bottom: 1.5pt;
+	padding: 3pt;
+	border: 1pt solid darkslategrey;	
+	border-radius: 10px;
+	min-height: 3.5em;	
+	background-color: ivory;
+}
+
+.imgscroll {
+        background-color: limegreen;
+}
